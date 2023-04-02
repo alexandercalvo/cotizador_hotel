@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+.section-quote {
+  background: red;
+  padding: 0 0px;
+}
+
+.section-quote__checkin-checkout {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: green;
+  padding-bottom: 15px;
+}
+.section-quote__input {
+  width: 45vw;
+}
+.section-quote__checkin,
+.section-quote__checkout {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-quote__number-person {
+  display: flex;
+  justify-content: center;
+}

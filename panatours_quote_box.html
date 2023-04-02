@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/panatours_quote_box.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="section-quote">
+      <div class="section-quote__checkin-checkout">
+        <div class="section-quote__checkin">
+          <label for="checkin">Fecha De Llegada</label>
+          <input
+            class="section-quote__input"
+            type="text"
+            name="checkin"
+            id=""
+          />
+        </div>
+        <div class="section-quote__checkout">
+          <label for="checkout">Fecha De Salida</label>
+          <input
+            class="section-quote__input"
+            type="text"
+            name="checkout"
+            id=""
+          />
+        </div>
+      </div>
+      <div class="section-quote__number-person">
+        <span class="section-quote__adults">4 Adultos</span>
+        <span class="section-quote__childs">3 niños</span>
+        <span class="section-quote__rooms"> 2 habitaciones</span>
+      </div>
+      <div class="section-quote__acomodation">
+        <div class="section-quote__add">+</div>
+        <div class="section-quote__minus">-</div>
+      </div>
+      <div class="section-quote__btn-search"></div>
+    </section>
+    <template id="section-quote__template">
+      <div class="section-quote__room">
+        <div class="section-quote__room-title">
+          <label for="info" class="section-quote__label">Info</label>
+        </div>
+        <div class="section-quote__number-adult">
+          <label for="" class="section-quote__label-adult"></label>
+          <div class="section-quote__box-adult">
+            <button class="section-quote__add-adult">+</button>
+            <input
+              class="section-quote__input-adult"
+              type="text"
+              name=""
+              id=""
+            />
+            <button class="section-quote__remove-adult">-</button>
+          </div>
+        </div>
+        <div class="section-quote__number-child">
+          <label for="" class="section-quote__label-child"></label>
+          <div class="section-quote__box-child">
+            <button class="section-quote__add-child">+</button>
+            <input
+              class="section-quote__input-child"
+              type="text"
+              name=""
+              id=""
+            />
+            <button class="section-quote__remove-child">-</button>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script src="./js/panatours_quote_box.js"></script>
+  </body>
+</html>
