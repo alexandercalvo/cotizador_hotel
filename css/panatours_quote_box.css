@@ -3,7 +3,7 @@ body {
   box-sizing: border-box;
 }
 .section-quote {
-  background: red;
+  background: #fff;
   padding: 0 0px;
 }
 
@@ -12,7 +12,7 @@ body {
   width: 100%;
   justify-content: space-evenly;
   background-color: green;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 .section-quote__input {
   width: 45vw;
@@ -26,4 +26,120 @@ body {
 .section-quote__number-person {
   display: flex;
   justify-content: center;
+}
+
+.section-quote__room{
+  display: flex;
+  flex-wrap:wrap ;  
+  justify-content: space-between;
+  border-bottom: 2px solid #000;
+  padding:5px 0 20px 0 ;
+    margin: 0 10px;
+
+}
+.section-quote__room-title{
+  flex-basis: 100%;
+  padding-bottom: 30px;
+}
+
+.section-quote__label-child, .section-quote__label-adult{
+  padding-bottom: 10px;
+  display: block;
+}
+.section-quote__number-adult{
+  flex-basis: 45vw;
+}
+.section-quote__number-child{
+flex-basis:  45vw;
+}
+.section-quote__label-adult{
+  display: block;
+  width:20vw;
+}
+.section-quote__box-adult{
+  width: 10vw;
+  justify-content: space-between;
+  display: flex;
+}
+
+.section-quote__box-child{
+  display: flex;
+  width: 10vw;
+  justify-content: space-between;
+}
+.section-quote__input-adult{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+
+.section-quote__input-child{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin: 0 5px;
+}
+.section-quote__add-adult, .section-quote__remove-adult, .section-quote__add-child ,.section-quote__remove-child{
+  display: block;
+  height: 35px;
+  background-color: red;
+  margin-top: 5px;
+  padding: 0 10px;
+  width: 120px;
+  font-weight: 900;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  width: 90px;
+}
+
+.section-quote__btn-add, .section-quote__btn-remove{
+  background-color: red;
+  color: white;
+  margin-top: 30px;
+  padding: 5px  10px;
+
+}
+
+.section-quote__btn-remove{
+}
+.section-quote__btn-send{
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 10px;
+  background-color: yellow;
+  color: white;
+  background-color: red;
+}
+
+.section-quote__input{
+  height: 30px;
+}
+.section-quote__number-person{
+  background-color: #db9230;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 10px;
+  margin-top: 10px;
+  border:1px dashed #000;
+}
+
+.section-quote__childs, .section-quote__rooms{
+  margin-left: 2px;
+}
+@media screen and ( min-width:768px) {
+ 
+  .section-quote__btn-send{
+    width: 20%;
+    display: block;
+    margin-left: 10px;
+  }
+  .section-quote__checkin-checkout{
+    background-color: blue;
+    width: auto;
+  }
 }
