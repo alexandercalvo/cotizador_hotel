@@ -132,14 +132,83 @@ flex-basis:  45vw;
   margin-left: 2px;
 }
 @media screen and ( min-width:768px) {
- 
+ body{
+   background-color:#34c9b4 ;
+ }
   .section-quote__btn-send{
     width: 20%;
     display: block;
     margin-left: 10px;
   }
   .section-quote__checkin-checkout{
-    background-color: blue;
-    width: auto;
+    width:40vw;
+    background-color: #FFF3E2;
+  }
+  .section-quote{
+    display:flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    background-color: #FEFDFC ;
+    padding: 10px 0;
+  }
+  .section-quote__input{
+    width: 120px;
+  }
+  .section-quote__btn-search{
+    background-color: #FFF3E2;
+    height: 60px;
+    width: 120px;
+  }
+  .section-quote__btn-send{
+    width: 80%; 
+    background-color: gray;
+    color:red;
+    margin:10px auto;
+  }
+  .section-quote__number-person{
+    margin: auto 5px; 
+    padding: 10px 30px;
+    padding-bottom: 5px;  
+    background-color: #FFF3E2;
+    height: 40px;
+    border: none;
+  }
+}
+
+@media screen and (min-width:1024px){
+
+  
+  .section-quote__checkin-checkout{
+    width: 30vw;
+  }
+  
+  .section-quote__btn-search{
+    width: 220px;
+  }
+
+  .section-quote__input{
+    width: 170px;
+  }
+
+  .section-quote__container-room{
+    width: 30vw;
+    margin: auto;
+    border: 1px solid #000;
+  }
+  .section-quote__number-adult{
+    flex-basis: 20%;
+  }
+  .section-quote__number-child{
+    flex-basis: 20%;
+  }
+  .section-quote__label-adult{
+    width: 10% ;
+  }
+  .section-quote__btn-add{
+    flex-basis: 30%;
+  }
+  .section-quote__btn-remove{
+    flex-basis: 30%;
   }
 }

@@ -148,7 +148,19 @@ const addAndSubtract = (event, operation) =>{
   }
           
 }
-
+const createContainerRoom = () =>{
+  let containerRoom =  $d.createElement("div");
+      containerRoom.classList.add("section-quote__container-room");
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && window.innerWidth > 600){
+       let $container = $d.querySelector('.section-quote');
+          position = $container.children[$container.children.length - 2],
+          $container.insertBefore($containerRoom, position);
+  }else{
+    let $containerpc = $d.querySelector('.section-quote');
+        $containerpc.insertAdjacentElement('afterend', containerRoom);
+  }
+}
+createContainerRoom();
 const addButtonAdd = () =>{
   const $listRooms = $d.querySelectorAll('.section-quote__room');
   
@@ -194,37 +206,37 @@ const removeButton = (parentElement) =>{
 
 const createBoxNumberPersons = (numberRoom) => {
   
-  let $containerBooking = $d.querySelector('.section-quote');
+  let $containerBooking = $d.querySelector('.section-quote__container-room');
   $templateRoom.querySelector('.section-quote__label').textContent = `Habitacion ${numberRoom}`;
   $templateRoom.querySelector('.section-quote__input-adult').value = 2;
   $templateRoom.querySelector('.section-quote__input-child').value = 0;
   $templateRoom.querySelector('.section-quote__input-child').textContent = 0;
-
-  if($containerBooking.children.length >=4){
+  if($containerBooking.children.length >=0){
     $templateRoom.querySelector('.section-quote__add-adult').setAttribute('id', `addroom${$containerBooking.children.length -3 }`);
     $templateRoom.querySelector('.section-quote__remove-adult').setAttribute('id', `removeroom${$containerBooking.children.length -3}`);
     $templateRoom.querySelector('.section-quote__add-child').setAttribute('id', `addchild${$containerBooking.children.length -3}`);
     $templateRoom.querySelector('.section-quote__remove-child').setAttribute('id', `removechild${$containerBooking.children.length -3}`);
   }
 
-  if($containerBooking.children.length){
 
-  }
   let $clone = $d.importNode($templateRoom, true);
   $fragment.appendChild($clone);
-  let $container = $d.querySelector('.section-quote'),
+  $containerBooking.appendChild($fragment);
+
+  /*let $container = $d.querySelector('.section-quote'),
   position = $container.children[$container.children.length - 2];
-  $container.insertBefore($fragment, position);
+  $containerBooking.appendChild($fragment);
+
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    $container.insertBefore($containerBooking, position);
+  }else{
+    let $roomInPC = $d.querySelector('.section-quote__desktop');
+    $roomInPC.appendChild($containerBooking);
+ }*/
   addButtonAdd();
 };
 
 handlerClicks();
 //handlerTouch()
 //
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-   console.log("movil")
-  alert('movil');
-} else {
-  console.log("comuputador")
-  alert('pc');
-}
+
